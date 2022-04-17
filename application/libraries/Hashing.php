@@ -59,8 +59,8 @@ class Hashing {
             }
         }
         for ($i=0; $i<$length; $i++) {
-            $sha  = hash('sha256',$sha.mt_rand());
-            $char = mt_rand(0,62);
+            $sha  = hash('sha256',$sha.random_int(0, mt_getrandmax()));
+            $char = random_int(0,62);
             $rnd .= chr(hexdec($sha[$char].$sha[$char+1]));
         }
         return $rnd;

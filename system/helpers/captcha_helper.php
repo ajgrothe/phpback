@@ -114,7 +114,7 @@ if ( ! function_exists('create_captcha'))
 			$str = '';
 			for ($i = 0; $i < 8; $i++)
 			{
-				$str .= substr($pool, mt_rand(0, strlen($pool) -1), 1);
+				$str .= substr($pool, random_int(0, strlen($pool) -1), 1);
 			}
 
 			$word = $str;

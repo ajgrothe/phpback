@@ -394,7 +394,7 @@ class CI_Upload {
 		if ($this->encrypt_name == TRUE)
 		{
 			mt_srand();
-			$filename = md5(uniqid(mt_rand())).$this->file_ext;
+			$filename = md5(uniqid(random_int(0, mt_getrandmax()))).$this->file_ext;
 		}
 
 		if ( ! file_exists($path.$filename))

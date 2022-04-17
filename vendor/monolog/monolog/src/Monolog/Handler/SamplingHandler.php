@@ -60,7 +60,7 @@ class SamplingHandler extends AbstractHandler
 
     public function handle(array $record)
     {
-        if ($this->isHandling($record) && mt_rand(1, $this->factor) === 1) {
+        if ($this->isHandling($record) && random_int(1, $this->factor) === 1) {
             // The same logic as in FingersCrossedHandler
             if (!$this->handler instanceof HandlerInterface) {
                 $this->handler = call_user_func($this->handler, $record, $this);
