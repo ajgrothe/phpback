@@ -43,7 +43,7 @@
 			</tbody>
 		</table>
 		<div id="changepasswordtable" style="display:none">
-			<form role="form" name="password-change-form" method="post" action="<?= base_url() . 'action/changepassword'?>" onsubmit="return validateForm()">
+			<form role="form" name="password-change-form" method="post" autocomplet="off" action="<?= base_url() . 'action/changepassword'?>" onsubmit="return validateForm()">
 	            <div class="form-group">
 	              <label><?= $lang['form_password_old']; ?></label>
 	              <input type="password" class="form-control" name="old" style="width:150px" required>
